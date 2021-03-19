@@ -1,4 +1,5 @@
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LoginView from "./pages/loginView";
 import HomeView from "./pages/homeView";
 import PageNotFoundView from "./pages/pageNotFoundView";
@@ -22,8 +23,8 @@ function App() {
                             <HomeView/>
                         </Route>
 
-                        <Route path={"/timerModal"}>
-                            <TimerModal children={TimerSection("Work")}
+                        <Route path="/timerModal">
+                            <TimerModal timerSection={TimerSection("Work")}
                                         assignmentAndNoteSection={AssignmentAndNotes()}/>
                         </Route>
 

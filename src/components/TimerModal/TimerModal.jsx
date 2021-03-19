@@ -1,26 +1,24 @@
+import React from "react";
 import ReactDOM from 'react-dom';
 
 const modalRoot = document.querySelector('#modal-root');
 
 export default function Modal(props) {
 
-    const {children, assignmentAndNoteSection} = props;
+    const {timerSection, assignmentAndNoteSection} = props;
     return ReactDOM.createPortal(
         <div className="modal-container">
+            {/* Components are displayed here */}
+            <div className="modal-content">
+                <div>
+                    {assignmentAndNoteSection}
+                </div>
 
-            {/*Components are displayed here*/}
+                <div>
+                    {timerSection}
+                </div>
 
-            
-          
-
-            <div >
-                {assignmentAndNoteSection}
             </div>
-
-            <div>
-                {children}
-            </div>
-
         </div>
         , modalRoot
     );

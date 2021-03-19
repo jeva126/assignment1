@@ -1,10 +1,11 @@
-export default function CurrentTask(props) {
+import React from "react";
 
-    const {task} = props;
+export default function CurrentTask() {
+
     return (
         <div >
             <div className="task-notes-title">
-                <div className="subtask-checkbox"></div>
+                <div className="subtask-checkbox"> </div>
                 <h2>Assignment 1</h2>
             </div>
 
